@@ -4,6 +4,7 @@ import '../providers/task_provider.dart';
 import '../widgets/task_stats.dart';
 import '../widgets/task_tile.dart';
 import '../widgets/add_task_dialog.dart';
+import 'about_screen.dart';
 
 // Main (and only) screen of the app. Brings together the stats
 // strip, the scrollable task list, and the FAB for adding new
@@ -26,6 +27,18 @@ class HomeScreen extends StatelessWidget {
         backgroundColor: const Color.fromARGB(255, 171, 124, 248),
         title: const Text('Task Manager'),
         centerTitle: true,
+        actions: [
+          IconButton(
+            tooltip: 'About',
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (_) => const AboutScreen()),
+              );
+            },
+            icon: const Icon(Icons.info_outline),
+          ),
+        ],
       ),
       body: Column(
         children: [
