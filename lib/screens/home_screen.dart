@@ -23,6 +23,7 @@ class HomeScreen extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: const Color.fromARGB(255, 171, 124, 248),
         title: const Text('Task Manager'),
         centerTitle: true,
       ),
